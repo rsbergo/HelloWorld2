@@ -26,6 +26,6 @@ public class HelloWorld
         System.out.println("So long, and thanks for all the fish");
         
         System.out.println();
-        System.out.println("Hello, Alice!");
+        System.out.println("Hello, Alice! Hello, Bob!");
     }
 }
