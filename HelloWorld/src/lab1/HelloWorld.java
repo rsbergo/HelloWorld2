@@ -24,5 +24,8 @@ public class HelloWorld
         System.out.println("Here ye : important announcement");
         System.out.println("Hello World!");
         System.out.println("So long, and thanks for all the fish");
+        
+        System.out.println();
+        System.out.println("Hello, Bob!");
     }
 }
