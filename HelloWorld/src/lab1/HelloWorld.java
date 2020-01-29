@@ -33,5 +33,10 @@ public class HelloWorld
         System.out.println();
         System.out.println("Hello, Charlie!");
         System.out.println("Hello, Denise!");
+        
+        // Part 5
+        System.out.println();
+        System.out.println("Hello, Ester!");
+        
     }
 }
