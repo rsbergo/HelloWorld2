@@ -1,5 +1,9 @@
 package lab1;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * COS 420 - Lab 1: A Git HelloWorld Tour
  * http://www.cs.usm.maine.edu/~macleod/courses/cos420/Spring2019/Lab1.html
@@ -11,9 +15,26 @@ package lab1;
  * Improved for the second Lab session:
  * COS 420 - Lab 2: Continuing the Git Tour
  * http://www.cs.usm.maine.edu/~macleod/courses/cos420/Spring2020/Lab2.html
+ * 
+ * Improved for the third Lab session:
+ * COS 420 - Lab 3: Issues, Milestones and Project Workflow
+ * http://www.cs.usm.maine.edu/~macleod/courses/cos420/Spring2020/Lab3.html
  */
 public class HelloWorld
 {
+    /**
+     * Gets the current date and return it as a formatted String. The date is formatted as "YYYY-MM-DD".
+     * 
+     * @return A string representation of the current date, formatted as "YYYY-MM-DD" 
+     */
+    public static String getCurrentDate()
+    {
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Date currentDate = new Date();
+        
+        return dateFormat.format(currentDate);
+    }
+    
     /**
      * Entry point for application.
      * 
@@ -38,5 +59,8 @@ public class HelloWorld
         System.out.println();
         System.out.println("Hello, Ester!");
         
+        //Lab3 - Part2.a
+        System.out.println();
+        System.out.println("Current date: " + getCurrentDate());
     }
 }
