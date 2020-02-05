@@ -36,6 +36,40 @@ public class HelloWorld
     }
     
     /**
+     * Converts the given bytes value to MiB using the following conversion rates:
+     * 
+     *     - 1 KB = 1024 bytes
+     *     - 1 MG = 1024 KB
+     *     
+     * @param bytes the value to be converted
+     * @return the value in MB equivalent to the given bytes value
+     */
+    private static double convertFromByteToMiB(long bytes)
+    {
+        return ((double) bytes / 1024) / 1024;
+    }
+    
+    /**
+     * Gets the total amount of memory in the Java virtual machine.
+     * 
+     * @return the total amount of memory in the Java virtual machine, measured in MB
+     */
+    public static double getTotalMemory()
+    {
+        return convertFromByteToMiB(Runtime.getRuntime().totalMemory());
+    }
+    
+    /**
+     * Gets the current amount of free memory in the Java virtual machine.
+     * 
+     * @return the current amount of free memory in the Java virtual machine, measured in MB
+     */
+    public static double getFreeMemory()
+    {
+        return convertFromByteToMiB(Runtime.getRuntime().freeMemory());
+    }
+    
+    /**
      * Entry point for application.
      * 
      * @param args main program arguments, currently not used
@@ -59,8 +93,16 @@ public class HelloWorld
         System.out.println();
         System.out.println("Hello, Ester!");
         
+        //Lab3
+        System.out.println();
+        System.out.println("--------");
+        System.out.println("Lab 3: Issues, Milestones and Project Workflow");
+        
         //Lab3 - Part2.a
         System.out.println();
         System.out.println("Current date: " + getCurrentDate());
+        
+        //Lab3 - Part2.b
+        System.out.printf("Current free memory: %.3f MB / %.0f MB\n", getFreeMemory(), getTotalMemory());
     }
 }
